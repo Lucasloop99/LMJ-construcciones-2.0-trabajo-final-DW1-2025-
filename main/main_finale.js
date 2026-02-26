@@ -120,3 +120,46 @@
   goTo(0);
   startAutoplay();
 })();
+
+   (function () {
+    "use strict";
+  
+    // Anima un número desde 0 hasta el target
+    function animateCounter(el, target, duration) {
+      const start = Date.now();
+  
+      function step() {
+        const elapsed = Date.now() - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Easing ease-out-cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+  
+      requestAnimationFrame(step);
+    }
+  
+    // Observar cuándo las stats entran en el viewport
+    function initCounters() {
+      const numbers = document.querySelectorAll(".exc-stat-number[data-target]");
+      if (!numbers.length) return;
+  
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !entry.target.dataset.animated) {
+            entry.target.dataset.animated = "true";
+            const target = parseInt(entry.target.dataset.target, 10);
+            animateCounter(entry.target, target, 1400);
+          }
+        });
+      }, { threshold: 0.3 });
+  
+      numbers.forEach(function (el) {
+        observer.observe(el);
+      });
+    }
+  
+    document.addEventListener("DOMContentLoaded", initCounters);
+  
+  })();

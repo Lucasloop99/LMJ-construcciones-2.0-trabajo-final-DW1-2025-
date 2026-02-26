@@ -1,12 +1,11 @@
-/*mobile menu
+/*mobile menu*/
 
 @media (max-width: 991px) {
-  /* ── Ocultar el colapso de Bootstrap — usamos panel custom 
   #mainNav {
     display: none !important;
   }
 
-  /* ── Restyling del navbar-toggler existente ── 
+  /*navbar-toggler*/
   .navbar-toggler {
     border: none;
     background: none;
@@ -48,7 +47,7 @@
     align-self: flex-end;
   }
 
-  /*Animación al abrir: se convierte en X
+  /*Animación al abrir: se convierte en X*/
   .navbar-toggler.open .burger-icon span:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
   }
@@ -60,7 +59,7 @@
     transform: translateY(-6px) rotate(-45deg);
   }
 
-  /*Etiqueta "Menu" inyectada por JS
+  /*Etiqueta "Menu" inyectada por JS*/
   .navbar-toggler .burger-label {
     font-size: 15px;
     font-weight: 500;
@@ -68,7 +67,7 @@
     font-family: "Inter", sans-serif;
   }
 
-  /*Overlay oscuro
+  /*Overlay oscuro*/
   .mobile-menu-overlay {
     position: fixed;
     inset: 0;
@@ -84,7 +83,7 @@
     pointer-events: all;
   }
 
-  /*Panel del menú
+  /*Panel del menú*/
   .mobile-menu {
     position: fixed;
     top: 0;
@@ -103,7 +102,7 @@
     visibility: visible;
   }
 
-  /* Cabecera: logo + botón cerrar 
+  /*header*/
   .mobile-menu-header {
     background: #ffffff;
     display: flex;
@@ -147,7 +146,7 @@
     stroke-linecap: round;
   }
 
-  /* Cuerpo con los ítems 
+  /* Cuerpo con los ítems*/ 
   .mobile-menu-body {
     background: #faf7f2;
     flex: 1;
@@ -161,7 +160,7 @@
     transform: translateX(0);
   }
 
-  /* Lista 
+  /* Lista */
   .mobile-menu-list {
     list-style: none;
     margin: 0;
@@ -190,7 +189,7 @@
     background: #f0ebe0;
   }
 
-  /* Íconos a la derecha 
+  /* Íconos a la derecha*/
   .mobile-menu-list .menu-icon {
     width: 26px;
     height: 26px;
@@ -206,7 +205,7 @@
   }
 }
 
-/* Desktop: nada del panel debe aparecer 
+/* Desktop*/
 @media (min-width: 992px) {
   .mobile-menu,
   .mobile-menu-overlay {

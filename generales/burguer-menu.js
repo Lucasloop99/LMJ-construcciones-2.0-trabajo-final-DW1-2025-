@@ -1,4 +1,4 @@
-/*(function () {
+(function () {
   "use strict";
 
   // Íconos SVG por ítem
@@ -47,7 +47,7 @@
     // Header
     menu.innerHTML = `
         <div class="mobile-menu-header">
-          <img src="logo.png" alt="LMJ Construcciones">
+          <img src="Assets/logo LMJ.png" alt="LMJ Construcciones">
           <button class="mobile-menu-close" aria-label="Cerrar menú">
             <svg viewBox="0 0 24 24">
               <line x1="18" y1="6" x2="6" y2="18"/>
@@ -129,4 +129,4 @@
       if (e.key === "Escape" && menu.classList.contains("open")) closeMenu();
     });
   });
-})();*/
+})();
