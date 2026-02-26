@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LMJ Construcciones (contacto)</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contacto/contacto.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg custom-navbar shadow-sm">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="Assets/logo LMJ.png" alt="LMJ Logo" height="60" />
+        </a>
+        <!-- Mobile Toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+          <ul class="navbar-nav align-items-lg-center gap-lg-4">
+            <li class="nav-item">
+              <a class="nav-link active" href="main_finale.html">inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="proyectos.html">proyectos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="cotizacion.html">Presupuesto Online</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                mas
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+                <li><a class="dropdown-item" href="#">FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="py-5 bg-page">
+      <div class="container">
+        <div class="row g-4 cards-equal-height">
+          <div class="col-lg-7">
+            <div class="contact-card p-4 p-lg-5 bg-white rounded-4 shadow-sm">
+              <h5 class="fw-bold mb-4">Escribinos</h5>
+
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nombre y apellido"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Correo electrónico"
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Asunto"
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      placeholder="Mensaje"
+                    ></textarea>
+                  </div>
+
+                  <div
+                    class="col-12 d-flex justify-content-between align-items-center mt-2"
+                  >
+                    <small class="text-muted">
+                      No compartimos tus datos con terceros.
+                    </small>
+
+                    <button class="btn btn-warning px-4">Enviar mensaje</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="contact-info p-4 p-lg-5 rounded-4 shadow-sm text-white">
+              <h5 class="fw-bold mb-4">Información de contacto</h5>
+
+              <ul class="list-unstyled contact-list">
+                <li>
+                  <i class="bi bi-envelope me-2"></i>
+                  contactodirecto@lmj.com
+                </li>
+
+                <li>
+                  <i class="bi bi-clock me-2"></i>
+                  Lunes a viernes · 9 a 18 hs
+                </li>
+
+                <li>
+                  <i class="bi bi-geo-alt me-2"></i>
+                  Av. Hipólito Yrigoyen 433 (BA, Argentina)
+                </li>
+
+                <li>
+                  <i class="bi bi-telephone me-2"></i>
+                  +54 11 1234 5678
+                </li>
+              </ul>
+
+              <hr class="border-light opacity-25 my-4" />
+
+              <p class="small">
+                Si ya realizaste un presupuesto online y querés ajustar
+                detalles, escribinos indicando la referencia de tu proyecto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container pb-5">
+      <div class="map-wrapper rounded-4 overflow-hidden shadow-sm">
+        <iframe
+          src="https://www.google.com/maps?q=Facultad+de+Arquitectura+Buenos+Aires&output=embed"
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </section>
+    <footer class="footer-section text-white">
+      <div class="container py-5">
+        <!-- Top Row -->
+        <div class="row align-items-center text-center text-lg-start mb-4">
+          <div class="col-lg-4 mb-3 mb-lg-0">
+            <img
+              src="Assets/logo_LMJ-removebg-preview (1).png"
+              alt="Logo"
+              width="50"
+            />
+          </div>
+
+          <div class="col-lg-4 mb-3 mb-lg-0">
+            <h4 class="fw-light mb-0">LMJ</h4>
+            <h5 class="fw-light">Construcciones</h5>
+          </div>
+
+          <div class="col-lg-4">
+            <h5 class="fw-light text-lg-end">
+              Construyendo futuros <br />
+              desde 1984
+            </h5>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <!-- Links Grid -->
+        <div class="row py-4">
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold mb-3">Navegacion principal</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Proyectos</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Presupuesto online</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold mb-3">Empresa</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Acerca de nosotros</a></li>
+              <li><a href="#">Nuestros Clientes</a></li>
+              <li><a href="#">Trabaja con Nosotros</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold mb-3">Informacion</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Preguntas frecuentes (FAQ)</a></li>
+              <li><a href="#">Blog / noticias</a></li>
+              <li><a href="#">Terminos y Condiciones</a></li>
+              <li><a href="#">Politica de Privacidad</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h6 class="fw-bold mb-3">Contacto</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Direccion</a></li>
+              <li><a href="#">Correo Electronico</a></li>
+              <li><a href="#">Telefono</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <!-- Bottom Row -->
+        <div class="row align-items-center pt-3">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <small
+              >LMJ Construcciones © 2025. Todos los derechos reservados.</small
+            >
+          </div>
+
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="contacto/contacto.js"></script>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+/* =====================
+   HERO CAROUSEL — hero-carousel.css
+   Agregar en el <head> de index.html
+   ===================== */
+
+/* ── Contenedor principal ── */
+.hero-carousel {
+  position: relative;
+  height: 80vh;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+/* ── Track (wrapper de slides) ── */
+.hc-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Slides ── */
+.hc-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hc-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* ── Overlays ── */
+.hc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(31, 42, 68, 0.55) 100%
+  );
+}
+
+.hc-overlay--warm {
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(50, 30, 10, 0.5) 100%
+  );
+}
+
+.hc-overlay--deep {
+  background: linear-gradient(
+    160deg,
+    rgba(10, 20, 50, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* ── Contenido del slide ── */
+.hc-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* Etiqueta pequeña sobre el título */
+.hc-tag {
+  display: inline-block;
+  background: rgba(245, 166, 35, 0.2);
+  border: 1px solid rgba(245, 166, 35, 0.6);
+  color: #f5a623;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+
+  /* Animación de entrada */
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+}
+
+.hc-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease 0.25s, transform 0.55s ease 0.25s;
+}
+
+.hc-sub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 28px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s;
+}
+
+.hc-btn {
+  display: inline-block;
+  background-color: #f5a623;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease 0.55s, transform 0.5s ease 0.55s,
+    background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hc-btn:hover {
+  background-color: #e6941a;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 166, 35, 0.4);
+}
+
+/* Activar animaciones cuando el slide es .active */
+.hc-slide.active .hc-tag,
+.hc-slide.active .hc-title,
+.hc-slide.active .hc-sub,
+.hc-slide.active .hc-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Flechas ── */
+.hc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.hc-arrow:hover {
+  background: rgba(245, 166, 35, 0.75);
+  border-color: #f5a623;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.hc-arrow--prev {
+  left: 20px;
+}
+.hc-arrow--next {
+  right: 20px;
+}
+
+/* ── Dots ── */
+.hc-dots {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.hc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+.hc-dot.active {
+  background: #f5a623;
+  width: 24px;
+  border-radius: 4px;
+  transform: none;
+}
+
+/* ── Barra de progreso ── */
+.hc-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: 10;
+}
+
+.hc-progress-bar {
+  height: 100%;
+  background: #f5a623;
+  width: 0%;
+  transition: width linear;
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+  .hero-carousel {
+    height: 60vh;
+  }
+
+  .hc-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-carousel {
+    height: 70vh;
+    min-height: 440px;
+  }
+
+  .hc-title {
+    font-size: 1.75rem;
+  }
+
+  .hc-sub {
+    font-size: 0.9rem;
+  }
+
+  .hc-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hc-arrow--prev {
+    left: 12px;
+  }
+  .hc-arrow--next {
+    right: 12px;
+  }
+}

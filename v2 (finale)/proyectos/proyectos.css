@@ -1,0 +1,210 @@
+/* GLobal*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f4f4;
+  color: #1f2a44;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #1f2a44;
+  margin-bottom: 5px;
+}
+
+.section-subtitle {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+/*Navbar*/
+.custom-navbar {
+  background-color: #f2f2f2;
+  padding: 12px 0;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 15px;
+  color: #222 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f5a623 !important;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+/*Project cards*/
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.07);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Overlay compartido (usado tanto en cards grandes como en las del grid) */
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  border-radius: 0 0 14px 14px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+}
+
+.project-overlay h5,
+.project-overlay h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.project-overlay h6 {
+  font-size: 14px;
+}
+
+.project-overlay .small {
+  font-size: 12px;
+  opacity: 0.85;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Cards grandes (col-lg-6) — más padding en el overlay */
+.col-lg-6 .project-overlay {
+  padding: 20px;
+}
+
+/* Cards del grid (col-lg-4) — padding más compacto */
+.col-md-6.col-lg-4 .project-overlay {
+  padding: 14px;
+}
+/* Igualar altura de todas las cards en una misma fila */
+.cards-equal-height {
+  align-items: stretch;
+}
+
+.cards-equal-height > [class*="col"] {
+  display: flex;
+}
+
+.cards-equal-height > [class*="col"] > * {
+  width: 100%;
+}
+
+/* ── Imágenes dentro de cards ── */
+.cards-equal-height .card,
+.cards-equal-height .service-card,
+.cards-equal-height .project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* La imagen ocupa todo el ancho y mantiene proporción fija */
+.cards-equal-height img {
+  width: 100%;
+  height: 220px;        /* altura fija igual en todas */
+  object-fit: cover;    /* recorta sin deformar */
+  object-position: center;
+  flex-shrink: 0;
+}
+
+/* El cuerpo de la card ocupa el espacio restante */
+.cards-equal-height .card-body {
+  flex: 1;
+}
+
+/*Footer*/
+.footer-section {
+  background-color: #1f2a44;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-links {
+  padding-left: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #d1d5db;
+  font-size: 14px;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fbbf24;
+}
+
+/*Responsive*/
+@media (max-width: 991px) {
+  .section-subtitle {
+    margin-bottom: 30px;
+  }
+  .mb-4 {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1.5rem !important;
+}
+}
+
+@media (max-width: 576px) {
+  .project-overlay {
+    padding: 10px;
+  }
+  .mb-4 {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1.5rem !important;
+}
+}

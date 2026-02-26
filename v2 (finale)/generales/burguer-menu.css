@@ -1,0 +1,215 @@
+/*mobile menu
+
+@media (max-width: 991px) {
+  /* ── Ocultar el colapso de Bootstrap — usamos panel custom 
+  #mainNav {
+    display: none !important;
+  }
+
+  /* ── Restyling del navbar-toggler existente ── 
+  .navbar-toggler {
+    border: none;
+    background: none;
+    box-shadow: none !important;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1f2a44;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    display: none;
+  }
+  .navbar-toggler .burger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 22px;
+  }
+
+  .navbar-toggler .burger-icon span {
+    display: block;
+    height: 2px;
+    background: #1f2a44;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-toggler .burger-icon span:nth-child(2) {
+    width: 65%;
+    align-self: flex-end;
+  }
+
+  /*Animación al abrir: se convierte en X
+  .navbar-toggler.open .burger-icon span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .navbar-toggler.open .burger-icon span:nth-child(2) {
+    opacity: 0;
+    width: 100%;
+  }
+  .navbar-toggler.open .burger-icon span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /*Etiqueta "Menu" inyectada por JS
+  .navbar-toggler .burger-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1f2a44;
+    font-family: "Inter", sans-serif;
+  }
+
+  /*Overlay oscuro
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1040;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+
+  .mobile-menu-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /*Panel del menú
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .mobile-menu.open {
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  /* Cabecera: logo + botón cerrar 
+  .mobile-menu-header {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid #e8e8e8;
+    flex-shrink: 0;
+
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu.open .mobile-menu-header {
+    transform: translateY(0);
+  }
+
+  .mobile-menu-header img {
+    height: 60px;
+  }
+
+  .mobile-menu-close {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1f2a44;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+  }
+
+  .mobile-menu-close svg {
+    width: 20px;
+    height: 20px;
+    stroke: #1f2a44;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  /* Cuerpo con los ítems 
+  .mobile-menu-body {
+    background: #faf7f2;
+    flex: 1;
+    overflow-y: auto;
+
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s;
+  }
+
+  .mobile-menu.open .mobile-menu-body {
+    transform: translateX(0);
+  }
+
+  /* Lista 
+  .mobile-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-menu-list li {
+    border-bottom: 1px solid #ede9e0;
+  }
+
+  .mobile-menu-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 22px;
+    text-decoration: none;
+    color: #1f2a44;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    transition: background 0.2s ease;
+  }
+
+  .mobile-menu-list a:hover,
+  .mobile-menu-list a.active {
+    background: #f0ebe0;
+  }
+
+  /* Íconos a la derecha 
+  .mobile-menu-list .menu-icon {
+    width: 26px;
+    height: 26px;
+    stroke: #1f2a44;
+    stroke-width: 1.5;
+    fill: none;
+    flex-shrink: 0;
+    transition: stroke 0.2s ease;
+  }
+
+  .mobile-menu-list a:hover .menu-icon {
+    stroke: #f5a623;
+  }
+}
+
+/* Desktop: nada del panel debe aparecer 
+@media (min-width: 992px) {
+  .mobile-menu,
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+}

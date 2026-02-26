@@ -1,0 +1,289 @@
+/*Global */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f4f4;
+  color: #1f2a44;
+}
+
+/*Navbar */
+.custom-navbar {
+  background-color: #f2f2f2;
+  padding: 12px 0;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 15px;
+  color: #222 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #f5a623 !important;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.bg-page {
+  background-color: #f4f4f4;
+}
+
+/*contact card*/
+.contact-card {
+  height: 100%;
+  border-radius: 18px !important;
+}
+
+.contact-card h5 {
+  font-weight: 600;
+  color: #1f2a44;
+}
+
+.contact-card .form-control {
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  padding: 10px 14px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card .form-control:focus {
+  border-color: #253256;
+  box-shadow: 0 0 0 0.15rem rgba(37, 50, 86, 0.15);
+}
+
+.contact-card textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.contact-card .btn-warning {
+  background-color: #f5a623;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 26px;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.contact-card .btn-warning:hover {
+  background-color: #e6941a;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.contact-card .btn-warning.sent {
+  background-color: #28a745;
+  cursor: default;
+  pointer-events: none;
+}
+
+/*contact info*/
+.contact-info {
+  background: #253256;
+  height: 100%;
+  border-radius: 18px !important;
+}
+
+.contact-info h5 {
+  font-weight: 600;
+}
+
+/* Lista de contacto */
+.contact-list {
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #d8dbe5;
+  line-height: 1.5;
+}
+
+.contact-list .bi {
+  font-size: 16px;
+  color: #f5a623;
+  min-width: 20px;
+  margin-top: 1px;
+}
+
+/*Mapa*/
+.map-wrapper {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  display: block;
+  border: 0;
+}
+
+.toast-confirm {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background: #253256;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-size: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.toast-confirm.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-confirm .bi {
+  color: #f5a623;
+  font-size: 18px;
+}
+
+/* Igualar altura de todas las cards en una misma fila */
+.cards-equal-height {
+  align-items: stretch;
+}
+
+.cards-equal-height > [class*="col"] {
+  display: flex;
+}
+
+.cards-equal-height > [class*="col"] > * {
+  width: 100%;
+}
+
+/* ── Imágenes dentro de cards ── */
+.cards-equal-height .card,
+.cards-equal-height .service-card,
+.cards-equal-height .project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* La imagen ocupa todo el ancho y mantiene proporción fija */
+.cards-equal-height img {
+  width: 100%;
+  height: 220px;        /* altura fija igual en todas */
+  object-fit: cover;    /* recorta sin deformar */
+  object-position: center;
+  flex-shrink: 0;
+}
+
+/* El cuerpo de la card ocupa el espacio restante */
+.cards-equal-height .card-body {
+  flex: 1;
+}
+
+/*Footer*/
+.footer-section {
+  background-color: #1f2a44;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-links {
+  padding-left: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #d1d5db;
+  font-size: 14px;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fbbf24;
+}
+
+/*Responsive */
+@media (max-width: 992px) {
+  .contact-card,
+  .contact-info {
+    margin-bottom: 25px;
+  }
+  .mb-4 {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-card,
+  .contact-info {
+    padding: 25px !important;
+  }
+
+  .map-wrapper iframe {
+    height: 300px;
+  }
+  .mb-4 {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .map-wrapper iframe {
+    height: 250px;
+  }
+
+  .toast-confirm {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+  .mb-4 {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1.5rem !important;
+  }
+}
